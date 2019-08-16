@@ -4,7 +4,12 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-sm-12 ">
-            {{ form }}
+            <form method="POST" enctype="multipart/form-data" action="/views/carousel)update">
+                {% csrf_token %}
+                {{ form }}
+                <hr>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
 
                 <!--<table class="table">-->
                 <!--<thead>-->

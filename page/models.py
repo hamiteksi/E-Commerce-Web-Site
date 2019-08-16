@@ -39,6 +39,9 @@ class Page(models.Model):
     # updated at
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.title
+
 
 class Carousel(models.Model):
     title = models.CharField(max_length=200, blank=True, null=True)
